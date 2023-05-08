@@ -40,21 +40,21 @@ body {
 
 .wrapper .sidebar ul li a {
     color: #728cff;
-    display: block;
+    /* display: block; */
 }
 
-.wrapper .sidebar ul li:hover {
+/* .wrapper .sidebar ul li:hover {
     background-color: #84d1f4;
 }
 
 .wrapper .sidebar ul li:hover a {
     color: #fff;
-}
+} */
 
 /* MAIN CONTENT */
 
 .wrapper .main_content {
-    margin-left: 280px;
+    margin-left: 250px;
     margin-top: 30px;
     margin-bottom: 30px;
     width: 100%;
@@ -73,8 +73,7 @@ body {
 
 .wrapper .main_content .section {
     margin-bottom: 25px;
-    margin-right: 960px;
-    overflow: hidden;
+    margin-right: 50%;
 }
 
 .wrapper .main_content .section h2 {
