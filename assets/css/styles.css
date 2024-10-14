@@ -114,8 +114,8 @@ body {
 }
 
 img {
-    max-width: 40%;
-    min-width: 480px;
+    max-width: 30%;
+    min-width: 10%;
     height: auto;
     margin-bottom: 15px;
     vertical-align: middle;
