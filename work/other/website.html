@@ -12,13 +12,16 @@
 
     <div class="wrapper">
         <!-- Sidebar -->
-        <div class="sidebar">
-            <h2><a href="/index.html" style="color:black;text-decoration: none;">William Tran</a></h2>
-            <ul>
-                <li><a href="/about.html"><b>About</b></a></li>
-                <li><a href="/work.html"><b>Selected Work</b></a></li>
-            </ul>
-        </div>
+        <!-- Sidebar Container -->
+        <div id="sidebar-container"></div>
+
+        <script>
+            fetch("/sidebar.html")
+                .then(response => response.text())
+                .then(data => document.getElementById("sidebar-container").innerHTML = data)
+                .catch(error => console.error("Error loading sidebar:", error));
+        </script>
+
 
         <div class="main_content">
             <div class="header">
@@ -26,7 +29,7 @@
                     <div class="work">
                         <h2 id="work">Portfolio Website</h2>
                         
-                        <p>This portfolio website was coded by me in HTML and CSS using VS Code. It is hosted on GitHub Pages and is continually updated with my recent work. The repository for this site is available to view on my GitHub.
+                        <p>This portfolio website was coded by me in HTML, CSS, and JavaScript using VS Code. It is hosted on GitHub Pages and is continually updated with my recent work. The repository for this site is available to view on my GitHub.
                         </p>
                     </div>
                 </div>

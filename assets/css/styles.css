@@ -91,6 +91,29 @@ body {
     font-style: italic;
 }
 
+.wrapper .main_content h3 {
+    font-size: 16pt;
+    color: #ff8c00; /* A warm orange similar to your h2 but slightly different */
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.wrapper .main_content .section h3 {
+    color: #ff9900; /* A slightly different shade of orange to maintain contrast */
+    margin-bottom: 10px;
+    padding-top: 5px;
+    font-style: italic;
+}
+
+.wrapper .sidebar h3 {
+    color: #555; /* Slightly muted color for contrast */
+    text-align: center;
+    margin-top: -15px; /* Adjust this value as needed to bring it closer to h2 */
+    margin-bottom: 20px; /* Space below h3 */
+    font-size: 18px; /* Slightly smaller than h2 */
+    font-weight: 400;
+}
+
 
 .wrapper .main_content .section ul li a{
     color: #0a0a0a;

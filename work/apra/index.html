@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="/assets/css/styles.css" type="text/css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>William Tran</title>
+    </head>
+<body>
+
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <!-- Sidebar Container -->
+        <div id="sidebar-container"></div>
+
+        <script>
+            fetch("/sidebar.html")
+                .then(response => response.text())
+                .then(data => document.getElementById("sidebar-container").innerHTML = data)
+                .catch(error => console.error("Error loading sidebar:", error));
+        </script>
+
+
+        <div class="main_content">
+            <div class="header">
+                <div class="section">
+                    <div class="work">
+                        <h2 id="work">Dungeons & Donors (Apra Data Science Now 2024 Finalist)
+                        </h2>
+                        <img src="Dungeons and Donors Poster.jpg" alt="Poster made for Apra conference">
+                        <p>In this project, my team and I built a 5-year campaign for a simulated higher-education organization based around forecasts from time-series modeling. This was done as a submission to <a href="https://www.aprahome.org/Events/Prospect-Development-2024/Data-Science-Now/The-Challenge" target="_blank" rel="noopener noreferrer">Apra's 2024 Data Science Challenge</a>, a yearly competition hosted by <a href="https://www.aprahome.org/" target="_blank" rel="noopener noreferrer">Apra</a> for analytics professionals working in the non-profit and higher education sectors. Our project was selected as a featured presentation at Apra's national 2024 Prospect Development Conference.
+                        <br><br>
+                        Working with my team at Saint Louis University, I handled data cleaning, conducted exploratory data analysis, contributed to the time series model, and created/verified the donor pyramid. I also handled creative direction, establishing the visual identity of the project with graphics and logos created using Adobe Illustrator and Photoshop.
+                        <br><br>
+                        This project was done using a combination of Python, R, Tableau, and Excel.
+                        </p>
+                            <object data="Dungeons and Donors Presentation.pdf" width="100%" height="500px">
+                                <p>Unable to display PDF file. <a href="Dungeons and Donors Presentation.pdf">Download</a> instead.</p>
+                              </object>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
