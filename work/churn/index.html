@@ -1,48 +1,58 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link href="/assets/css/styles.css" type="text/css" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>William Tran</title>
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>William Tran</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="/assets/css/styles.css" rel="stylesheet" type="text/css">
+</head>
 <body>
 
     <div class="wrapper">
         <!-- Sidebar -->
-        <!-- Sidebar Container -->
         <div id="sidebar-container"></div>
 
-        <script>
+        <!-- Sidebar Loader -->
+        <script defer>
             fetch("/sidebar.html")
                 .then(response => response.text())
                 .then(data => document.getElementById("sidebar-container").innerHTML = data)
                 .catch(error => console.error("Error loading sidebar:", error));
         </script>
 
+        <!-- Main Content -->
+        <main class="main_content">
+            <section class="work">
+                <h2 id="work">Predicting Customer Churn at Telco</h2>
 
-        <div class="main_content">
-            <div class="header">
-                <div class="section">
-                    <div class="work">
-                        <h2 id="work">Predicting customer churn at Telco</h2>
-                        <img src="churn chart.png" alt="Chart comparing coefficients of our fitted ML model">
-                        <p>This machine learning project aims to predict the likelihood of customer churn at Telco, a large telecommunications company based in the United States.
-                        <br><br>
-                        I worked on this project by myself as a part of my Big Data Analytics course at UC Santa Barbara.
-                        <br><br>
-                        This project was done using Python and PySpark via Jupyter Notebooks, with data and computing hosted on the Google Cloud Platform. 
-                        </p>
-                            <object data="Telco Customer Churn Analysis.pdf" width="100%" height="500px">
-                                <p>Unable to display PDF file. <a href="Telco Customer Churn Analysis.pdf">Download</a> instead.</p>
-                              </object>
+                <img src="churn chart.png" alt="Chart comparing coefficients of our fitted ML model" class="center">
 
-                    </div>
-                </div>
-            </div>
-        </div>
+                <p>
+                    This machine learning project aims to predict the likelihood of customer churn at Telco, 
+                    a large telecommunications company based in the United States.
+                </p>
+                <p>
+                    I worked on this project by myself as part of my Big Data Analytics course at UC Santa Barbara.
+                </p>
+                <p>
+                    This project was done using Python and PySpark via Jupyter Notebooks, 
+                    with data and computing hosted on the Google Cloud Platform.
+                </p>
+
+                <object data="Telco Customer Churn Analysis.pdf" width="100%" height="500px">
+                    <p>
+                        Unable to display PDF file. <a href="Telco Customer Churn Analysis.pdf" target="_blank">Download</a> instead.
+                    </p>
+                </object>
+            </section>
+        </main>
     </div>
 
 </body>

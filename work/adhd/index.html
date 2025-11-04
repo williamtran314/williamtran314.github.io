@@ -1,49 +1,59 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link href="/assets/css/styles.css" type="text/css" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>William Tran</title>
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>William Tran</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="/assets/css/styles.css" rel="stylesheet" type="text/css">
+</head>
 <body>
 
     <div class="wrapper">
         <!-- Sidebar -->
-        <!-- Sidebar Container -->
         <div id="sidebar-container"></div>
 
-        <script>
+        <!-- Sidebar Loader -->
+        <script defer>
             fetch("/sidebar.html")
                 .then(response => response.text())
                 .then(data => document.getElementById("sidebar-container").innerHTML = data)
                 .catch(error => console.error("Error loading sidebar:", error));
         </script>
 
+        <!-- Main Content -->
+        <main class="main_content">
+            <section class="work">
+                <h2 id="work">Analyzing ADHD and its Effects on Academic Performance</h2>
 
-        <div class="main_content">
-            <div class="header">
-                <div class="section">
-                    <div class="work">
-                        <h2 id="work">Analyzing ADHD and its effects on academic performance
-                        </h2>
-                        <img src="adhd charts.png" alt="Chart comparing the counts of students in different academic criteria">
-                        <p>This data analysis project aims to determine if ADHD/ADD status and internet usage in learning affect a student's parent-reported academic performance, and to predict academic performance based off of these given factors via a multiclass classification model.
-                        <br><br>
-                        Working with two other group members, I handled the bulk of the data cleaning and exploratory analysis as well as assembling the final report document.
-                        <br><br>
-                        This project was done entirely in Python via Jupyter Notebooks, with large datasets provided by the National Household Education Surveys Program.
-                        </p>
-                            <object data="ADHD Analysis.pdf" width="100%" height="500px">
-                                <p>Unable to display PDF file. <a href="ADHD Analysis.pdf">Download</a> instead.</p>
-                              </object>
+                <img src="adhd charts.png" alt="Chart comparing the counts of students in different academic criteria" class="center">
 
-                    </div>
-                </div>
-            </div>
-        </div>
+                <p>
+                    This data analysis project aims to determine if ADHD/ADD status and internet usage in learning affect a student's parent-reported academic performance, 
+                    and to predict academic performance based on these factors via a multiclass classification model.
+                </p>
+                <p>
+                    Working with two other group members, I handled the bulk of the data cleaning and exploratory analysis, 
+                    as well as assembling the final report document.
+                </p>
+                <p>
+                    This project was done entirely in Python via Jupyter Notebooks, 
+                    with large datasets provided by the National Household Education Surveys Program.
+                </p>
+
+                <object data="ADHD Analysis.pdf" width="100%" height="500px">
+                    <p>
+                        Unable to display PDF file. <a href="ADHD Analysis.pdf" target="_blank">Download</a> instead.
+                    </p>
+                </object>
+            </section>
+        </main>
     </div>
 
 </body>

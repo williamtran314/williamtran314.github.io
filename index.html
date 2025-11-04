@@ -1,34 +1,52 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link href="assets/css/styles.css" type="text/css" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>William Tran</title>
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>William Tran</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
+</head>
 <body>
 
     <div class="wrapper">
-        <!-- Sidebar -->
         <!-- Sidebar Container -->
         <div id="sidebar-container"></div>
 
-        <script>
-            fetch("sidebar.html")
-                .then(response => response.text())
-                .then(data => document.getElementById("sidebar-container").innerHTML = data)
-                .catch(error => console.error("Error loading sidebar:", error));
-        </script>
-
-
-        <div class="main_content">
-            <div class="header">
-                <img src="assets/images/headshot.jpg" alt="Bill Tran">
-            </div>
-        </div>
+        <!-- Main Content -->
+        <main class="main_content">
+            <header>
+                <section>
+                    <img src="assets/images/headshot.jpg" alt="Bill Tran">
+                </section>
+            </header>
+        </main>
     </div>
 
+    <!-- Sidebar Loader Script -->
+    <script defer>
+        fetch("sidebar.html")
+        .then(response => response.text())
+        .then(data => {
+            const container = document.getElementById("sidebar-container");
+            container.innerHTML = data;
+
+            const sidebar = container.querySelector(".sidebar");
+            const toggle = container.querySelector(".menu-toggle");
+
+            if (toggle && sidebar) {
+                toggle.addEventListener("click", () => {
+                    sidebar.classList.toggle("active");
+                });
+            }
+        })
+        .catch(error => console.error("Error loading sidebar:", error));
+    </script>
 </body>
 </html>
